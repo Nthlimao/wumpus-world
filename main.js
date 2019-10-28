@@ -381,4 +381,81 @@ $(document).ready(function() {
                 break;
         }
     });
+
+    // BUTTONS
+    $('#right-btn').click(function(){
+        if(face === 'right') {
+            if(col < 4) {
+                col = col + 1;
+                functions.walk(row, col);
+            } else {
+                functions.createToast('Impacto');
+            }
+        } else {
+            face = 'right';
+            functions.walk(row, col, face);
+        }
+    });
+    $('#left-btn').click(function(){
+        if (face === 'left') {
+            if (col > 1) {
+                col = col - 1;
+                functions.walk(row, col);
+            } else {
+                functions.createToast('Impacto');
+            }
+        } else {
+            face = 'left';
+            functions.walk(row, col, face);
+        }
+    });
+    $('#up-btn').click(function(){
+        if(face === 'up') {
+            if(row < 4) {
+                row = row + 1;
+                functions.walk(row, col);
+            } else {
+                functions.createToast('Impacto');
+            }
+        } else {
+            face = 'up';
+            functions.walk(row, col, face);
+        }
+    });
+    $('#down-btn').click(function(){
+        if(face === 'down') {
+            if(row > 1) {
+                row = row - 1;
+                functions.walk(row, col);
+            } else {
+                functions.createToast('Impacto');
+            }
+        } else {
+            face = 'down';
+            functions.walk(row, col, face);
+        }
+    });
+    $('#e-btn').click(function(){
+        hasGold = functions.getGold(row, col);
+        if(hasGold) functions.createToast('O Agente Pegou o Ouro');
+    });
+    $('#enter-btn').click(function(){
+        if(arrows > 0){
+            arrows = arrows - 1;
+            functions.shoot(row, col, face);
+        } else {
+            functions.createToast('O agente não tem mais flechas')
+        } 
+    });
+    $('#space-btn').click(function(){
+        if(col === 1 && row === 1){
+            if(hasGold) functions.createToast('O Agente saiu da caverna com o Ouro');
+            else {
+                functions.createToast('O Agente saiu da caverna');
+            }
+            $('#agente').remove();
+
+            $('#wumpus, #pit-0, #pit-1, #pit-2, #gold').addClass('visibility');
+        }
+    });
 });

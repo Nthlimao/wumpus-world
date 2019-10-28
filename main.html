@@ -2,6 +2,9 @@
     <meta http-equiv="Content-Language" content="pt-br">
     <head>
         <title>Wumpus World</title>
+        <link rel="icon" href="favicon.png" type="image/x-icon"/>
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
+
         <link rel="stylesheet" type="text/css" href="styles.css">
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script src="main.js"></script>
@@ -52,21 +55,21 @@
             <div class="keymap">
                 <div class="arrows-move">
                     <div class="move-up">
-                        <span class="move-key">⇧</span>
+                        <span class="move-key" id="up-btn">⇧</span>
                     </div>
-                    <div class="move-key">⇦</div>
-                    <div class="move-key">⇩</div>
-                    <div class="move-key">⇨</div>
+                    <div class="move-key" id="left-btn">⇦</div>
+                    <div class="move-key" id="down-btn">⇩</div>
+                    <div class="move-key" id="right-btn">⇨</div>
                 </div>
-                <div class="key">
+                <div class="key" id="e-btn">
                     <span>E</span>
                     Agarrar
                 </div>
-                <div class="key">
+                <div class="key" id="enter-btn">
                     <span>Enter</span>
                     Atirar
                 </div>
-                <div class="key">
+                <div class="key" id="space-btn">
                     <span>Space</span>
                     Escalar
                 </div>

@@ -8,6 +8,10 @@ app.get('/', function(req, res) {
     res.sendFile(path.resolve(__dirname, 'main.html'));
 });
 
+app.get('/favicon.png', function(req, res) {
+    res.sendFile(path.resolve(__dirname, 'favicon.png'));
+});
+
 app.get('/main.js', function(req, res) {
     res.sendFile(path.resolve(__dirname, 'main.js'));
 });
