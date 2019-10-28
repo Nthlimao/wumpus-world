@@ -1,10 +1,12 @@
 {
-  "name": "Wumpus World",
+  "name": "wumpus-world",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/NthlLima/wumpus-world/issues"
   },
-  "homepage": "https://github.com/NthlLima/wumpus-world#readme"
+  "homepage": "https://github.com/NthlLima/wumpus-world#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
 }

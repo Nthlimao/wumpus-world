@@ -70,7 +70,7 @@ var functions = {
                         var bloco = values[row][i];
 
                         if(bloco.includes('Wumpus')){
-                            alert('A Flecha atingiu o Wumpus');
+                            functions.createToast('A Flecha atingiu o Wumpus');
                             death = true;
                             functions.killWumpus(row, i);
                             break;
@@ -78,7 +78,7 @@ var functions = {
                     }
                 } 
                 
-                if(!death) alert('A Flecha atingiu a parede');
+                if(!death) functions.createToast('A Flecha atingiu a parede');
 
                 break;
             case 'left':
@@ -87,7 +87,7 @@ var functions = {
                         var bloco = values[row][i];
 
                         if(bloco.includes('Wumpus')){
-                            alert('A Flecha atingiu o Wumpus');
+                            functions.createToast('A Flecha atingiu o Wumpus');
                             death = true;
                             functions.killWumpus(row, i);
                             break;
@@ -95,7 +95,7 @@ var functions = {
                     }
                 } 
 
-                if(!death) alert('A Flecha atingiu a parede');
+                if(!death) functions.createToast('A Flecha atingiu a parede');
 
                 break;
             case 'up':
@@ -104,7 +104,7 @@ var functions = {
                         var bloco = values[i][col];
 
                         if(bloco.includes('Wumpus')){
-                            alert('A Flecha atingiu o Wumpus');
+                            functions.createToast('A Flecha atingiu o Wumpus');
                             death = true;
                             functions.killWumpus(i, col);
                             break;
@@ -112,7 +112,7 @@ var functions = {
                     }
                 }
 
-                if(!death) alert('A Flecha atingiu a parede');
+                if(!death) functions.createToast('A Flecha atingiu a parede');
                 break;
             case 'down':
                     if(row > 1) {
@@ -120,7 +120,7 @@ var functions = {
                             var bloco = values[i][col];
     
                             if(bloco.includes('Wumpus')){
-                                alert('A Flecha atingiu o Wumpus');
+                                functions.createToast('A Flecha atingiu o Wumpus');
                                 death = true;
                                 functions.killWumpus(i, col);
                                 break;
@@ -128,7 +128,7 @@ var functions = {
                         }
                     }
     
-                    if(!death) alert('A Flecha atingiu a parede');
+                    if(!death) functions.createToast('A Flecha atingiu a parede');
                 break;
         }
     },
