@@ -379,6 +379,9 @@ $(document).ready(function() {
                     $('#wumpus, #pit-0, #pit-1, #pit-2, #gold').addClass('visibility');
                 }
                 break;
+            case 76:
+                $('#main').toggleClass('light');
+                break;
         }
     });
 
